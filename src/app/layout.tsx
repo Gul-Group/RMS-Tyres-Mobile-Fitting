@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { HeroUIProvider } from "@heroui/react";
+import TopBar from "@/components/layout/TopBar";
+import TopNav from "@/components/layout/TopNav";
 
 export const metadata: Metadata = {
   title: "RMS Tyres Mobile Fitting",
@@ -15,7 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <HeroUIProvider>{children}</HeroUIProvider>
+        <HeroUIProvider>
+          <TopBar />
+          <TopNav />
+          {children}
+        </HeroUIProvider>
       </body>
     </html>
   );
