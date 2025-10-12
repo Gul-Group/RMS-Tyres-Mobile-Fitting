@@ -13,17 +13,18 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-// Configure Poppins font
+// Configure Poppins font - only load weights used in hero
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["600", "700"], // Only hero headline weights for performance
   display: "swap",
   variable: "--font-poppins",
+  preload: true, // Preload for critical hero text
 });
 
 export const metadata: Metadata = {
   title: "RMS Tyres Mobile Fitting",
-  description: "4Hr Mobile tyre fiting",
+  description: "Professional mobile tyre fitting service across the UK. Same-day service, competitive prices, 12-month warranty.",
 };
 
 export default function RootLayout({
