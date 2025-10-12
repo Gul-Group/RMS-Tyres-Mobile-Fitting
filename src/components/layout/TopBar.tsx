@@ -19,21 +19,20 @@ export default function TopBar({
       top="0"
       style={{
         zIndex: 50,
-        backgroundColor: 'var(--color-background)',
         borderBottom: '1px solid var(--gray-6)',
         backdropFilter: 'blur(8px)',
       }}
     >
-      <Container p="4">
+      <Container p="2">
         <Flex
-          direction={{ initial: 'column', sm: 'row' }}
+          direction={{ initial: 'column', sm: 'row', md: 'row' }}
           align={{ initial: 'center', sm: 'center' }}
-          justify="between"
+          justify="center"
           gap="4"
         >
           {/* Left: Breadcrumbs + Title */}
           <Flex direction="column" gap="2">
-            <Heading size="4" weight="bold" className="font-poppins">
+            <Heading size="4"  weight="bold" className="font-poppins">
               {title}
             </Heading>
           </Flex>

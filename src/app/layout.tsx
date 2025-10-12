@@ -35,7 +35,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${poppins.variable}`}>
         <Theme accentColor="red">
           <TopBar 
-            title="RMS Tyres Mobile Fitting"
+            title="Mobile Tyre Fitting 24/7 — Quick, Reliable, Guaranteed"
             actionLabel="Call Now"
             actionHref="tel:07932030303"
           />
