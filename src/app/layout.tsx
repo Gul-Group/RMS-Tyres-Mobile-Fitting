@@ -3,6 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
 import { Theme } from "@radix-ui/themes";
+import NavBar from "@/components/layout/NavBar";
 import TopBar from "@/components/layout/TopBar";
 
 // Configure Inter font
@@ -39,6 +40,7 @@ export default function RootLayout({
             actionLabel="Call Now"
             actionHref="tel:07932030303"
           />
+          <NavBar />
           <main>
             {children}
           </main>
