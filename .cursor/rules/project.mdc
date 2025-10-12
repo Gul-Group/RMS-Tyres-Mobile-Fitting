@@ -1,0 +1,136 @@
+---
+alwaysApply: true
+---
+
+## 🎯 Project Scope
+- **Type:** RMS Tyres Mobile Fitting web app (UK market).
+- **Framework:** Next.js (App Router).
+- **Styling & UI:** Tailwind CSS + Radix UI.
+- **Theme:** Light mode only.
+- **Devices:** Fully responsive (mobile-first, tablet, desktop).
+- **Locale:** English (UK), SEO-optimised context.
+
+---
+
+## 🏗️ Architecture & Code Principles
+- **Server-first rendering:** Use Server Components by default. Client Components only for interactive UI.
+- **Static-first SEO:** Use Static Site Generation (SSG) for static content. Use Incremental Static Regeneration (ISR) for content that updates (e.g., tyre prices).
+- **Clean components:** Small, composable, typed props. No side effects in render paths.
+- **TypeScript strictness:** Strict mode enabled. No `any`. Use constants/enums instead of magic numbers/strings.
+- **File organisation:**  
+  - `app/` for routes and layouts.  
+  - `components/` for UI.  
+  - `lib/ui/` for Radix wrappers.  
+- **Imports:** Absolute imports with `baseUrl`/`paths`. No deep relative chains.
+- **State management:** Keep state local. Avoid global client state unless essential.
+
+---
+
+## 🎨 Styling & UI Conventions
+- **Tailwind-first:** Use utility classes for layout and spacing. Extract helpers with `cn()` for readability.
+- **Radix wrapping:** Wrap Radix primitives into design-system components (Button, Dialog, Input, Tooltip).
+- **Design tokens:** Centralise colours, spacing, radii, shadows, and breakpoints in Tailwind config.
+- **Animations:** Allowed via CSS or Framer Motion. Must respect `prefers-reduced-motion`. Provide fallbacks.
+
+---
+
+## ♿ Accessibility (WCAG 2.2 AA)
+- **Landmarks:** Use `<header>`, `<nav>`, `<main>`, `<footer>`, `<section>`.
+- **Keyboard operability:** All interactive elements must be keyboard accessible. Focus traps in modals. Escape closes dialogs.
+- **Visible focus:** Always provide visible focus styles.
+- **Forms:** Inputs must have labels, helper text, and inline error messages with `aria-live`.
+- **Colour & motion:** Maintain text contrast ≥ 4.5:1. Respect reduced motion preferences.
+- **Images:** Always provide meaningful `alt`. Decorative images use empty `alt`.
+
+---
+
+## ⚡ Performance
+- **Rendering:** Server Components by default. Client Components only when hooks/effects are needed.
+- **Static generation:** Use SSG for SEO-heavy pages. ISR for dynamic but mostly static content.
+- **Code splitting:** Lazy-load heavy components with `next/dynamic`.
+- **Tree shaking:** Import only needed Radix modules and icons.
+- **Images:** Use `next/image` with responsive `sizes`. Use `priority` only for above-the-fold hero images.
+- **Fonts:** Use Google Fonts via `next/font/google` with `display: swap`. Limit to required weights/styles.
+- **Caching:** Use Next.js caching and route segment config. Prefetch internal links.
+
+---
+
+## 🔍 SEO Strategy
+- **Semantic HTML:** One `<h1>` per page. Logical heading hierarchy.
+- **Metadata:** Each page must define:  
+  - `<title>` (unique, keyword-rich)  
+  - `<meta name="description">`  
+  - Canonical URL  
+  - Open Graph (`og:title`, `og:description`, `og:image`, `og:url`)  
+  - Twitter Card tags
+- **Structured data (JSON-LD):**  
+  - `LocalBusiness` / `AutoService` for RMS Tyres.  
+  - `Product` for tyre listings.  
+  - `Service` for fitting services.  
+  - `BreadcrumbList` for navigation.
+- **Sitemaps & robots:** Generate `sitemap.xml` and `robots.txt`. Disallow non-public routes.
+- **Canonicalisation:** Ensure consistent canonical tags. Use trailing slash strategy consistently.
+- **URLs:** Human-readable, keyword-rich slugs (e.g., `/mobile-tyre-fitting/`, `/tyres/205-55-r16/`).
+- **Internal linking:** Use descriptive anchor text. Link between services, tyres, and booking.
+- **Local SEO cues:** Include UK address, phone, and service areas in schema and footer.
+
+---
+
+## 🖼️ Image & Media Handling
+- **next/image:** Always use with descriptive `alt`, responsive `sizes`, and explicit width/height.
+- **Formats:** Prefer AVIF/WebP. Optimise quality for balance.
+- **CLS prevention:** Provide dimensions or aspect ratios.
+
+---
+
+## 🧭 Navigation & Layout
+- **Header/nav:** Semantic `<nav>` with skip-to-content link. Accessible menu with Radix.
+- **Footer:** Include NAP (Name, Address, Phone), key links, and social metadata consistency.
+- **Breadcrumbs:** Visible UI + JSON-LD.
+- **Layout:** `app/layout.tsx` sets base HTML, meta, fonts, and landmarks.
+
+---
+
+## 📝 Content & Copy
+- **Language:** UK English (tyres, mobile fitting).
+- **Clarity:** Concise headings and meta descriptions aligned with user tasks.
+- **Avoid keyword stuffing:** Natural, benefit-led copy.
+
+---
+
+## ✅ Output Requirements for AI
+- Provide **full file contents** for new pages/components.  
+- Reference **exact paths** (`app/`, `components/`, `lib/ui/`).  
+- Include **short rationales** for server vs client usage, ISR intervals, and SEO decisions.  
+- End deliverables with **checklists** for SEO, accessibility, and performance.
+
+---
+
+## 📋 Final Checklists
+
+### SEO
+- Unique `<title>` + `<meta description>` per page.  
+- OG/Twitter tags set.  
+- Canonical URL correct.  
+- JSON-LD schema applied.  
+- Sitemap + robots configured.  
+- Internal links descriptive.  
+- Keyword-rich slugs.
+
+### Accessibility
+- Proper landmarks.  
+- Keyboard operability.  
+- Visible focus.  
+- Labels + error messages.  
+- Contrast ≥ 4.5:1.  
+- Alt text for images.
+
+### Performance
+- Server-first rendering.  
+- SSG/ISR applied.  
+- Lazy-load heavy components.  
+- `next/image` with sizes.  
+- Optimised Google Fonts.  
+- Tree-shaken imports.
+
+---
