@@ -88,6 +88,24 @@ body {
   }
 }
 
+/* Horizontal scroll-snap helpers for brand slider */
+.snap-x-mandatory {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.snap-center {
+  scroll-snap-align: center;
+}
+
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
 /* Hero Section Critical CSS for instant FCP */
 .hero-container {
   padding: 3rem 1rem;

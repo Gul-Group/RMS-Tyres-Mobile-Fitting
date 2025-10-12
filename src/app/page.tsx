@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/hero/Hero";
+import TopBrandsSlider from "@/components/brands/TopBrandsSlider";
 
 export const metadata: Metadata = {
   title: "Expert Mobile Tyre Fitting — We Come to You | RMS Tyres",
@@ -35,6 +36,9 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <section aria-label="Trusted tyre brands" className="mt-8">
+        <TopBrandsSlider />
+      </section>
       
       {/* JSON-LD Structured Data */}
       <script
