@@ -5,6 +5,7 @@ import "./globals.css";
 import { Theme } from "@radix-ui/themes";
 import NavBar from "@/components/layout/NavBar";
 import TopBar from "@/components/layout/TopBar";
+import { Footer } from "@/components/layout/Footer";
 
 // Configure Inter font
 const inter = Inter({
@@ -45,6 +46,7 @@ export default function RootLayout({
           <main>
             {children}
           </main>
+          <Footer />
         </Theme>
       </body>
     </html>

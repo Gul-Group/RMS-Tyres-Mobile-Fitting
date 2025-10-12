@@ -4,6 +4,7 @@ import Link from "next/link"
 import { SERVICES } from "@/lib/content/services"
 
 import { ServiceCard } from "@/components/services/ServiceCard"
+import { WhyChooseUs } from "@/components/why/WhyChooseUs"
 
 const siteUrl = "https://rmstyres.co.uk"
 const pageUrl = `${siteUrl}/services/`
@@ -89,6 +90,8 @@ export default function ServicesPage() {
           <ServiceCard key={service.key} service={service} />
         ))}
       </div>
+
+      <WhyChooseUs />
 
       <section
         aria-labelledby="services-cta-heading"

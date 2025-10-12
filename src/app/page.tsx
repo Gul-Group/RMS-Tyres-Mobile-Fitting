@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/hero/Hero";
 import TopBrandsSlider from "@/components/brands/TopBrandsSlider";
+import { ReviewsSection } from "@/components/reviews/ReviewsSection";
 import { ServicesSection } from "@/components/services/ServicesSection";
+import { WhyChooseUs } from "@/components/why/WhyChooseUs";
 
 export const metadata: Metadata = {
   title: "Expert Mobile Tyre Fitting — We Come to You | RMS Tyres",
@@ -38,9 +40,11 @@ export default function Home() {
     <main>
       <Hero />
       <ServicesSection />
+      <WhyChooseUs />
       <section aria-label="Trusted tyre brands" className="mt-16">
         <TopBrandsSlider />
       </section>
+      <ReviewsSection />
       
       {/* JSON-LD Structured Data */}
       <script
@@ -97,7 +101,7 @@ export default function Home() {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
-              "reviewCount": "500"
+              "reviewCount": "624"
             }
           })
         }}
