@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
-import "@radix-ui/themes/styles.css";
-import "./globals.css";
+import '@radix-ui/themes/styles.css';
 import { Theme } from "@radix-ui/themes";
 import NavBar from "@/components/layout/NavBar";
-import TopBar from "@/components/layout/TopBar";
 import { Footer } from "@/components/layout/Footer";
+import WhatsAppButton from "../components/layout/WhatsAppButton";
+import "./globals.css";
 
 // Configure Inter font
 const inter = Inter({
@@ -37,11 +37,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${poppins.variable}`}>
         <Theme accentColor="red">
-          <TopBar 
-            title="Mobile Tyre Fitting 24/7 — Quick, Reliable, Guaranteed"
-            actionLabel="Call Now"
-            actionHref="tel:07932030303"
-          />
+          <WhatsAppButton />
           <NavBar />
           <main>
             {children}
