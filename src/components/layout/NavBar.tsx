@@ -3,21 +3,15 @@ import MobileMenu from "./MobileMenu";
 import NavLink from "./NavLink";
 import { cn } from "@/lib/utils/cn";
 import { PhoneIcon } from "@/src/lib/icons";
-
-const navigationItems = [
-  { href: "/", label: "Home", title: "RMS Tyres Mobile Fitting - Home", prefetch: true },
-  { href: "/services", label: "Services", title: "Mobile Tyre Fitting Services UK", prefetch: true },
-  { href: "/tyres", label: "Tyres", title: "Tyres for Cars, Vans & Emergency Fitting", prefetch: true },
-  { href: "/coverage-area", label: "Coverage Area", title: "UK Mobile Tyre Fitting Coverage", prefetch: true },
-  { href: "/faq", label: "FAQ", title: "Frequently Asked Questions - RMS Tyres", prefetch: false },
-  { href: "/about", label: "About", title: "About RMS Tyres Mobile Fitting", prefetch: false },
-  { href: "/contact", label: "Contact", title: "Contact RMS Tyres UK", prefetch: true },
-];
+import { NAVIGATION_ITEMS } from "@/src/lib/content/NavbarConstant";
 
 export default function NavBar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
-      <nav aria-label="Primary" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <nav
+        aria-label="Primary"
+        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+      >
         <div className="flex h-16 items-center justify-between">
           {/* Mobile menu button */}
           <div className="flex items-center md:hidden order-1">
@@ -39,7 +33,7 @@ export default function NavBar() {
 
           {/* Desktop navigation */}
           <div className="hidden md:flex md:items-center md:space-x-4 order-2">
-            {navigationItems.map((item) => (
+            {NAVIGATION_ITEMS.map((item) => (
               <NavLink
                 key={item.href}
                 href={item.href}
@@ -70,8 +64,6 @@ export default function NavBar() {
           </div>
         </div>
       </nav>
-
-      
     </header>
   );
 }
