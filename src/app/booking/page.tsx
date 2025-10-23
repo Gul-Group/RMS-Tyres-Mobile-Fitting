@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PhoneIcon, MailIcon, ArrowLeftIcon } from "lucide-react";
+import { ArrowLeftIcon, PhoneIcon, MailIcon } from "@/lib/icons";
 
 export const metadata: Metadata = {
   title: "Book Your Mobile Tyre Fitting | RMS Tyres",

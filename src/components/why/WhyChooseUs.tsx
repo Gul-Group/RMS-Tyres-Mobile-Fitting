@@ -1,24 +1,30 @@
-import { BadgeCheck, Clock, ShieldCheck, ThumbsUp, Wrench } from "lucide-react"
+import { 
+  WrenchIcon, 
+  BadgeCheckIcon, 
+  ShieldCheckIcon, 
+  ThumbsUpIcon, 
+  ClockIcon 
+} from "@/lib/icons"
 
 const features = [
   {
-    icon: Wrench,
+    icon: WrenchIcon,
     title: "Expert engineers",
     description:
       "Fully trained, insured technicians equipped with modern mobile workshops.",
   },
   {
-    icon: BadgeCheck,
+    icon: BadgeCheckIcon,
     title: "Experienced skills",
     description: "Years of roadside support and precision tyre fitting expertise.",
   },
   {
-    icon: ShieldCheck,
+    icon: ShieldCheckIcon,
     title: "Guaranteed service",
     description: "12-month workmanship guarantee for confidence at every call-out.",
   },
   {
-    icon: ThumbsUp,
+    icon: ThumbsUpIcon,
     title: "Trusted work",
     description: "Thousands of happy customers and a consistent 4.9★ average rating.",
   },
@@ -26,11 +32,11 @@ const features = [
 
 const badges = [
   {
-    icon: Clock,
+    icon: ClockIcon,
     label: "Approx. 45-minute response time",
   },
   {
-    icon: ShieldCheck,
+    icon: ShieldCheckIcon,
     label: "24-hour mobile fitting service",
   },
 ]

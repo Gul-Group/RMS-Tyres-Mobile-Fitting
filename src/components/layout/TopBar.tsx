@@ -1,4 +1,3 @@
-import { Box, Flex, Button, Heading, Container } from "@radix-ui/themes";
 import Link from "next/link";
 
 interface TopBarProps {
@@ -13,38 +12,28 @@ export default function TopBar({
   actionHref
 }: TopBarProps) {
   return (
-    <Box
-      asChild
-      position="sticky"
-      top="0"
-      style={{
-        zIndex: 50,
-        borderBottom: '1px solid var(--gray-6)',
-        backdropFilter: 'blur(8px)',
-      }}
+    <div
+      className="sticky top-0 z-50 border-b border-gray-200 backdrop-blur-md bg-white/80"
     >
-      <Container p="2">
-        <Flex
-          direction={{ initial: 'column', sm: 'row', md: 'row' }}
-          align={{ initial: 'center', sm: 'center' }}
-          justify="center"
-          gap="4"
-        >
+      <div className="container mx-auto px-4 py-2">
+        <div className="flex flex-col sm:flex-row md:flex-row items-center justify-center gap-4">
           {/* Left: Breadcrumbs + Title */}
-          <Flex direction="column" gap="2">
-            <Heading size="4"  weight="bold" className="font-poppins">
+          <div className="flex flex-col gap-2">
+            <h1 className="text-2xl font-bold font-poppins">
               {title}
-            </Heading>
-          </Flex>
+            </h1>
+          </div>
 
           {/* Right: Action Button */}
-          <Button asChild size="2" className="font-poppins">
-            <Link href={actionHref} target="_blank">
-              {actionLabel}
-            </Link>
-          </Button>
-        </Flex>
-      </Container>
-    </Box>
+          <Link 
+            href={actionHref} 
+            target="_blank"
+            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-200 font-poppins"
+          >
+            {actionLabel}
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }

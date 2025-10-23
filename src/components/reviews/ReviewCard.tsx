@@ -1,8 +1,8 @@
-import { Star } from "lucide-react";
 import Link from "next/link";
 
 import type { ReviewItem, ReviewSourceSummary } from "@/lib/types/reviews";
 import { cn } from "@/lib/utils/cn";
+import { StarIcon } from "@/lib/icons";
 
 const platformAccentStyles: Record<ReviewSourceSummary["platform"], string> = {
   google: "text-[#DB4437]",
@@ -39,7 +39,7 @@ export function ReviewCard({ review, source }: ReviewCardProps) {
           <span>{source.label}</span>
         </div>
         <div className="flex items-center gap-1 text-sm font-semibold text-gray-900">
-          <Star
+          <StarIcon
             aria-hidden="true"
             className={cn("h-4 w-4 fill-current", accentClass)}
           />

@@ -1,4 +1,4 @@
-import { StarIcon, ClockIcon, ShieldCheckIcon } from 'lucide-react';
+import { StarIcon, ClockIcon, ShieldCheckIcon } from "@/lib/icons";
 
 const trustItems = [
   {

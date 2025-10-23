@@ -1,5 +1,3 @@
-import type { LucideIcon } from "lucide-react"
-
 export interface Service {
   key:
     | "mobile-tyre-fitting"
@@ -12,5 +10,5 @@ export interface Service {
   description: string
   href: string
   ctaLabel: string
-  icon: LucideIcon
+  icon: React.ComponentType<{ className?: string }>
 }

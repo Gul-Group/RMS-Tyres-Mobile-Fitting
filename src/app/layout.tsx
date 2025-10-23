@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
-import '@radix-ui/themes/styles.css';
-import { Theme } from "@radix-ui/themes";
 import NavBar from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import WhatsAppButton from "../components/layout/WhatsAppButton";
@@ -36,14 +34,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${poppins.variable}`}>
-        <Theme accentColor="red">
-          <WhatsAppButton />
-          <NavBar />
-          <main>
-            {children}
-          </main>
-          <Footer />
-        </Theme>
+        <WhatsAppButton />
+        <NavBar />
+        <main>
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
