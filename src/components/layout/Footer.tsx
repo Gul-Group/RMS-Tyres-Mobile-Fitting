@@ -9,7 +9,7 @@ import {
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-100" aria-labelledby="footer-heading">
+    <div className="bg-gray-900 text-gray-100" aria-labelledby="footer-heading">
       <div className="container mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[2fr_1fr_1fr_1fr]">
           <div>
@@ -146,7 +146,7 @@ export function Footer() {
           }),
         }}
       />
-    </footer>
+    </div>
   );
 }
 
