@@ -1,17 +1,13 @@
-import { HeroContent } from './HeroContent';
-import { HeroVisual } from './HeroVisual';
-import { HeroImpressionTracker } from './HeroImpressionTracker';
+import { HeroContent } from "./HeroContent";
 
 export function Hero() {
   return (
-    <section 
-      className="hero-container"
+    <section
+      className="relative overflow-hidden bg-white"
       aria-labelledby="hero-headline"
     >
-      <HeroImpressionTracker />
-      <div className="hero-grid">
+      <div className="mx-auto max-w-5xl px-6 py-16 sm:px-8 lg:px-12 lg:py-24 ">
         <HeroContent />
-        <HeroVisual />
       </div>
     </section>
   );

@@ -23,19 +23,19 @@ const trustItems = [
 
 export function TrustBar() {
   return (
-    <div className="flex flex-wrap gap-4 md:gap-6">
+    <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-gray-600 md:gap-6">
       {trustItems.map((item, index) => {
         const IconComponent = item.icon;
         return (
           <div 
             key={index}
-            className="flex items-center gap-2 text-sm text-gray-600"
+            className="flex items-center gap-2"
           >
             <IconComponent 
-              className="w-4 h-4 text-red-600 flex-shrink-0" 
+              className="h-5 w-5 flex-shrink-0 text-red-600" 
               aria-hidden="true"
             />
-            <span className="font-medium">{item.text}</span>
+            <span>{item.text}</span>
             <span className="sr-only">{item.label}</span>
           </div>
         );
