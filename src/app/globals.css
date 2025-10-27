@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
 /* Font family definitions */
 :root {
@@ -89,20 +91,36 @@ body {
 }
 
 /* Horizontal scroll-snap helpers for brand slider */
-.snap-x-mandatory {
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+.slick-slider {
+  padding-inline: 1rem;
 }
 
-.snap-center {
-  scroll-snap-align: center;
+@media (min-width: 768px) {
+  .slick-slider {
+    padding-inline: 1.5rem;
+  }
 }
 
-.no-scrollbar {
-  scrollbar-width: none; /* Firefox */
+.slick-slide > div {
+  display: flex;
+  justify-content: center;
 }
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+.scroll-slick-prev {
+  left: 0.25rem;
+}
+
+.scroll-slick-next {
+  right: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .scroll-slick-prev {
+    left: -1.5rem;
+  }
+
+  .scroll-slick-next {
+    right: -1.5rem;
+  }
 }
 

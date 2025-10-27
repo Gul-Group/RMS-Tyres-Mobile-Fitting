@@ -88,9 +88,8 @@ export default function RootLayout({
 
         <header>
           <NavBar />
+          <WhatsAppButton />
         </header>
-
-        <WhatsAppButton />
 
         <main id="main-content">{children}</main>
 

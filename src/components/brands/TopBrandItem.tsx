@@ -10,16 +10,16 @@ export interface TopBrandItemProps {
 
 export default function TopBrandItem({ slug, name, index, priority }: TopBrandItemProps) {
   return (
-    <li
+    <div
       role="listitem"
-      className="snap-center snap-always flex-shrink-0 px-3"
+      className="flex w-full justify-center px-3 md:px-4"
       data-brand-index={index}
       aria-label={name}
     >
       <div className="flex h-16 w-40 items-center justify-center md:h-20 md:w-48">
         <Image
           alt={`${name} logo`}
-          src={`/logos/${slug}-320w.webp`}
+          src={`/images/tyres_logo/${slug}-tyre-logo.png`}
           width={320}
           height={160}
           priority={priority}
@@ -28,7 +28,7 @@ export default function TopBrandItem({ slug, name, index, priority }: TopBrandIt
           draggable={false}
         />
       </div>
-    </li>
+    </div>
   );
 }
 

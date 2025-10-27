@@ -7,11 +7,14 @@ import { WhyChooseUs } from "@/components/why/WhyChooseUs";
 
 export const metadata: Metadata = {
   title: "Expert Mobile Tyre Fitting — We Come to You | RMS Tyres",
-  description: "Same-day mobile tyre fitting service across the UK. Trusted fitters, 12-month warranty, competitive prices. Book in minutes.",
-  keywords: "mobile tyre fitting, tyre fitting service, same day tyre fitting, mobile tyre service, UK tyre fitting",
+  description:
+    "Same-day mobile tyre fitting service across the UK. Trusted fitters, 12-month warranty, competitive prices. Book in minutes.",
+  keywords:
+    "mobile tyre fitting, tyre fitting service, same day tyre fitting, mobile tyre service, UK tyre fitting",
   openGraph: {
     title: "Expert Mobile Tyre Fitting — We Come to You | RMS Tyres",
-    description: "Same-day mobile tyre fitting service across the UK. Trusted fitters, 12-month warranty, competitive prices.",
+    description:
+      "Same-day mobile tyre fitting service across the UK. Trusted fitters, 12-month warranty, competitive prices.",
     type: "website",
     url: "https://rmstyres.co.uk",
     siteName: "RMS Tyres Mobile Fitting",
@@ -27,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Expert Mobile Tyre Fitting — We Come to You | RMS Tyres",
-    description: "Same-day mobile tyre fitting service across the UK. Trusted fitters, 12-month warranty, competitive prices.",
+    description:
+      "Same-day mobile tyre fitting service across the UK. Trusted fitters, 12-month warranty, competitive prices.",
     images: ["/images/hero/hero-van-technician.webp"],
   },
   alternates: {
@@ -39,13 +43,13 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <TopBrandsSlider />
       <ServicesSection />
       <WhyChooseUs />
-      <section aria-label="Trusted tyre brands" className="mt-16">
-        <TopBrandsSlider />
-      </section>
+
+      {/* <section aria-label="Trusted tyre brands" className="mt-16"></section> */}
       <ReviewsSection />
-      
+
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -53,57 +57,59 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "RMS Tyres Mobile Fitting",
-            "description": "Professional mobile tyre fitting service across the UK. Same-day service, competitive prices, 12-month warranty.",
-            "url": "https://rmstyres.co.uk",
-            "telephone": "07932030303",
-            "email": "info@rmstyres.co.uk",
-            "address": {
+            name: "RMS Tyres Mobile Fitting",
+            description:
+              "Professional mobile tyre fitting service across the UK. Same-day service, competitive prices, 12-month warranty.",
+            url: "https://rmstyres.co.uk",
+            telephone: "07932030303",
+            email: "info@rmstyres.co.uk",
+            address: {
               "@type": "PostalAddress",
-              "addressCountry": "GB",
-              "addressRegion": "England"
+              addressCountry: "GB",
+              addressRegion: "England",
             },
-            "geo": {
+            geo: {
               "@type": "GeoCircle",
-              "geoMidpoint": {
+              geoMidpoint: {
                 "@type": "GeoCoordinates",
-                "latitude": 51.5074,
-                "longitude": -0.1278
+                latitude: 51.5074,
+                longitude: -0.1278,
               },
-              "geoRadius": "40234"
+              geoRadius: "40234",
             },
-            "areaServed": {
+            areaServed: {
               "@type": "GeoCircle",
-              "geoMidpoint": {
+              geoMidpoint: {
                 "@type": "GeoCoordinates",
-                "latitude": 51.5074,
-                "longitude": -0.1278
+                latitude: 51.5074,
+                longitude: -0.1278,
               },
-              "geoRadius": "40234"
+              geoRadius: "40234",
             },
-            "serviceType": "Mobile Tyre Fitting",
-            "hasOfferCatalog": {
+            serviceType: "Mobile Tyre Fitting",
+            hasOfferCatalog: {
               "@type": "OfferCatalog",
-              "name": "Tyre Fitting Services",
-              "itemListElement": [
+              name: "Tyre Fitting Services",
+              itemListElement: [
                 {
                   "@type": "Offer",
-                  "itemOffered": {
+                  itemOffered: {
                     "@type": "Service",
-                    "name": "Mobile Tyre Fitting",
-                    "description": "Professional mobile tyre fitting service at your location"
-                  }
-                }
-              ]
+                    name: "Mobile Tyre Fitting",
+                    description:
+                      "Professional mobile tyre fitting service at your location",
+                  },
+                },
+              ],
             },
-            "openingHours": "Mo-Su 00:00-23:59",
-            "priceRange": "££",
-            "aggregateRating": {
+            openingHours: "Mo-Su 00:00-23:59",
+            priceRange: "££",
+            aggregateRating: {
               "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "624"
-            }
-          })
+              ratingValue: "4.9",
+              reviewCount: "624",
+            },
+          }),
         }}
       />
     </main>
